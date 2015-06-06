@@ -6,7 +6,11 @@ This repository contains tests and helper scripts for querying the d2Prism API
 
 ## Installation
 
+Assuming you have [nodejs](https://nodejs.org/download/) and [npm](https://nodejs.org/download/) installed, boot up a command-line and run these commands.
+
 ```
+> git clone https://github.com/gullyfoyle/d2prism-api.git
+> cd d2prism-api
 > npm install
 > npm test
 ```
