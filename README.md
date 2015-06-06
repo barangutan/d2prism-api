@@ -2,11 +2,11 @@
 
 # d2Prism API
 
-This repository contains tests and helper scripts for querying the d2Prism API
+This repository contains tests and helper scripts for querying the [d2Prism](http://www.d2prism.com) API.
 
 ## Installation
 
-Assuming you have [nodejs](https://nodejs.org/download/) and [npm](https://nodejs.org/download/) installed, boot up a command-line and run these commands.
+Assuming you have the [git](https://git-scm.com/downloads)/[nodejs](https://nodejs.org/download/)/[npm](https://nodejs.org/download/) toolbelt installed, boot up a command-line and run these commands.
 
 ```
 > git clone https://github.com/gullyfoyle/d2prism-api.git
@@ -14,6 +14,39 @@ Assuming you have [nodejs](https://nodejs.org/download/) and [npm](https://nodej
 > npm install
 > npm test
 ```
+
+## Properties of returned JSON
+
+Querying the API will return one or more JSON objects in the following format:
+
+```json
+{
+    "_id": "54cbd0f8803adee297023a79",
+    "courier": "Stumpy",
+    "effect": "Ethereal Flame",
+    "hex": "B47A9D",
+    "r": 180,
+    "g": 122,
+    "b": 157,
+    "meta": {
+        "smashed": false
+    },
+    "ntc": "Bouquet"
+}
+```
+
+The properties are fairly self-explanatory but for the sake of clarity can be broken down as follows:
+
+* **_id**: the unique guid of the courier. Needed as there are certain couriers with un-unique R,G,B values.
+* **courier**: the courier model.
+* **effect**: the courier effect (ethereal gem).
+* **hex**: a hexidecimal representation of the R,G,B value.
+* **r,g and b**: the red, green and blue colour values.
+* **meta**: extra information, such as:
+  * _smashed_: whether or not the courier is smashed (had its gems extracted, thus losing its 'legacy' tag)
+* **ntc**: the named colour, based on [this awesome Javascript library](http://chir.ag/projects/name-that-color/) (the same one used on d2lp).
+
+There will be more properties added in the future and they will be documented here.
 
 ## API calls
 
@@ -64,6 +97,13 @@ Returns an array of legacy couriers. Example:
 	    },
 	    "ntc": "Malachite"
 	},
-	...
 ]
 ```
+
+
+
+## Random courier
+
+`http://www.d2prism.com/api/couriers/random`
+
+Returns a random courier from the database.
