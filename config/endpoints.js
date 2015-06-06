@@ -1,5 +1,5 @@
 module.exports.endpoints = {
-	PING: 'http://localhost:5000/api/ping',
-	ALL_COURIERS: 'http://localhost:5000/api/couriers',
-	RANDOM: 'http://localhost:5000/api/couriers/random',
+	PING: 'http://www.d2prism.com/api/ping',
+	ALL_COURIERS: 'http://www.d2prism.com/api/couriers',
+	RANDOM: 'http://www.d2prism.com/api/couriers/random',
 }
