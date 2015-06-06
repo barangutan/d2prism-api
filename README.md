@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### d2Prism API
 
 This repository contains tests and helper scripts for querying the d2Prism API
@@ -29,3 +30,7 @@ Returns HTTP status code 200 and is used to signify the api being queryable.
 `http://www.d2prism.com/api/couriers`
 
 Returns an array of legacy couriers.
+=======
+# d2prism-api
+d2Prism API tests and helper scripts
+>>>>>>> 3713413af0d6c5f75bc143521408050659dc9d9d
