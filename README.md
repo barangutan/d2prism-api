@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/gullyfoyle/d2prism-api.svg?branch=master)](https://travis-ci.org/gullyfoyle/d2prism-api)
-
-# d2Prism API
+# d2Prism API [![Build Status](https://travis-ci.org/gullyfoyle/d2prism-api.svg?branch=master)](https://travis-ci.org/gullyfoyle/d2prism-api)
 
 This repository contains tests and helper scripts for querying the [d2Prism](http://www.d2prism.com) API.
 
@@ -107,3 +105,6 @@ Returns an array of legacy couriers. Example:
 `http://www.d2prism.com/api/couriers/random`
 
 Returns a random courier from the database.
+
+
+** README ongoing **
