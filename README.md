@@ -28,4 +28,36 @@ Returns HTTP status code 200 and is used to signify the api being queryable.
 
 `http://www.d2prism.com/api/couriers`
 
-Returns an array of legacy couriers.
+Returns an array of legacy couriers. Example:
+
+```json
+[
+	{
+	    "_id": "54cbd0f8803adee2970238fd",
+	    "courier": "Enduring War Dog",
+	    "effect": "Piercing Beams",
+	    "hex": "D3613D",
+	    "r": 211,
+	    "g": 97,
+	    "b": 61,
+	    "meta": {
+	        "smashed": false
+	    },
+	    "ntc": "Red Damask"
+	},
+	{
+	    "_id": "54cbd0f8803adee2970238fe",
+	    "courier": "Enduring War Dog",
+	    "effect": "Piercing Beams",
+	    "hex": "0ACF7A",
+	    "r": 10,
+	    "g": 207,
+	    "b": 122,
+	    "meta": {
+	        "smashed": false
+	    },
+	    "ntc": "Malachite"
+	},
+	...
+]
+```
