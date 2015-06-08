@@ -52,6 +52,7 @@ There will be more properties added in the future and they will be documented he
 - [All Couriers](#all-couriers)
 - [Random courier](#random-courier)
 - [Courier by RGB](#courier-by-rgb)
+- [Similar couriers](#similar-couriers)
 
 ---
 
@@ -98,13 +99,34 @@ Returns an array of legacy couriers. Example:
 ]
 ```
 
-
-
 ## Random courier
 
 `http://www.d2prism.com/api/couriers/random`
 
 Returns a random courier from the database.
 
+## Courier by RGB
 
-** README ongoing **
+`http://www.d2prism.com/api/couriers/r,g,b`
+
+_For example:_
+
+`http://www.d2prism.com/api/couriers/180,122,157`
+
+Returns one or more couriers based on the RGB value passed in. We say "one or more" because there are several instances in which there are more than one 'legacy' tagged courier with the same RGB.
+
+* [41,91,123 - "Calypso"](http://www.d2prism.com/api/couriers/41,91,123)
+* [196,57,198 - "Amethyst"](http://www.d2prism.com/api/couriers/196,57,198)
+* [50,166,207 - "Scooter"](http://www.d2prism.com/api/couriers/50,166,207)
+
+If you wish to return the record for a specific one, you must further pass its id as a parameter:
+
+`http://www.d2prism.com/api/couriers/50,166,207/54cbd0f8803adee2970238d3`
+
+## Similar Couriers
+
+`http://www.d2prism.com/api/couriers/similar/r,g,b`
+
+_For example:_
+
+`http://www.d2prism.com/api/couriers/similar/180,122,157`

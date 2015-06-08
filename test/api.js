@@ -47,19 +47,19 @@ describe('d2Prism API -', function() {
 		});
 	});
 
-	describe('When we request a courier which exists', function() {
-		it('it should return one', function(done) {
+	describe('When we request a specific courier which exists', function() {
+		it('it should return at least one', function(done) {
 
 			request(endpoints['RGB'] + '180,122,157', function (err, res, body) {
 				expect(res.statusCode).to.equal(200);
-				expect(JSON.parse(body).length).to.be.equal(1);
+				expect(JSON.parse(body).length).to.be.above(0);
 				done();
 			});
 			
 		});
 	});
 
-	describe('When we request a courier which doesn\'t exist', function() {
+	describe('When we request a specific courier which doesn\'t exist', function() {
 		it('it should return a HTTP status of 404', function(done) {
 
 			request(endpoints['RGB'] + '6,6,6', function (err, res, body) {
@@ -82,7 +82,7 @@ describe('d2Prism API -', function() {
 		});
 	});
 
-	describe('When we request similar couriers for a non existing courier', function() {
+	describe('When we request similar couriers for a non-existing courier', function() {
 		it('it should still return 8 of them', function(done) {
 
 			request(endpoints['SIMILAR'] + '6,6,6', function (err, res, body) {
